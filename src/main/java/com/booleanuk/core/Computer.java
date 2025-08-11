@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Computer {
     private final PowerSupply powerSupply;
-    public ArrayList<Game> installedGames = new ArrayList<>();
+    public ArrayList<Game> installedGames;
 
     public Computer(PowerSupply powerSupply) {
         this.powerSupply = powerSupply;
-        this.installedGames = new ArrayList<Game>();
+        this.installedGames = new ArrayList<>();
     }
 
     public Computer(PowerSupply powerSupply, ArrayList<Game> installedGames) {
