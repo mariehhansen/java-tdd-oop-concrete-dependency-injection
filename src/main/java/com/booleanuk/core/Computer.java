@@ -3,7 +3,7 @@ package com.booleanuk.core;
 import java.util.ArrayList;
 
 public class Computer {
-    private PowerSupply powerSupply;
+    private final PowerSupply powerSupply;
     public ArrayList<Game> installedGames = new ArrayList<>();
 
     public Computer(PowerSupply powerSupply) {
@@ -16,12 +16,10 @@ public class Computer {
         this.installedGames = installedGames;
     }
     public void turnOn() {
-        //PowerSupply psu = new PowerSupply();
         this.powerSupply.turnOn();
     }
 
-    public void installGame(String name) {
-        Game game = new Game(name);
+    public void installGame(Game game) {
         this.installedGames.add(game);
     }
 
